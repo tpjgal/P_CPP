@@ -1,0 +1,8 @@
+Designing and developing C++ based software on the Linux platform
+• Object-oriented concepts
+• C++, language specification, object-oriented constructs in C++, templates, STL library
+• Revision control tools like GIT
+• Linux multi-threading, multi-processing, synchronization mechanisms, IPC
+• Libraries like boost, glib
+• Unit testing & static analysis tools
+• Linux development toolchain, debugging tools like GDB

@@ -1,0 +1,8 @@
+﻿  stdafx.cpp
+  Chapter16-Win32.cpp
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+glfw3.lib(init.obj) : error LNK2019: unresolved external symbol __imp__vsnprintf referenced in function __glfwInputError
+MSVCRTD.lib(vsnprintf.obj) : error LNK2001: unresolved external symbol __imp__vsnprintf
+glfw3.lib(context.obj) : error LNK2019: unresolved external symbol __imp__sscanf referenced in function _parseVersionString
+MSVCRTD.lib(vsnprintf.obj) : error LNK2001: unresolved external symbol __imp___vsnprintf
+C:\Esakki\Books\IT_Books\C++_Books\appres\cpp-20-recipes-master\first edition code\Chapter16-Win32\Debug\Chapter16-Win32.exe : fatal error LNK1120: 3 unresolved externals

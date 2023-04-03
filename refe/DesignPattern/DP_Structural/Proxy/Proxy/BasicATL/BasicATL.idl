@@ -1,0 +1,18 @@
+// BasicATL.idl : IDL source for BasicATL
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (BasicATL.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(3654165b-ee73-4e21-87e6-78da9c3b68aa),
+	version(1.0),
+]
+library BasicATLLib
+{
+	importlib("stdole2.tlb");
+};
+

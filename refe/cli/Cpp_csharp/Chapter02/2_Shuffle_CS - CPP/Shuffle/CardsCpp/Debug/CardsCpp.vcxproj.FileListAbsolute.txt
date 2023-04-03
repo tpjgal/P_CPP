@@ -1,0 +1,3 @@
+C:\Users\ponni\source\repos\E_CPP_practice\cli\Cpp_csharp\Chapter02\2_Shuffle_CS - CPP\Shuffle\CardsCpp\Debug\CardsCpp.vcxproj.AssemblyReference.cache
+C:\Users\ponni\source\repos\E_CPP_practice\cli\Cpp_csharp\Chapter02\2_Shuffle_CS - CPP\Shuffle\CardsCpp\Debug\CardsCpp.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\ponni\source\repos\E_CPP_practice\cli\Cpp_csharp\Chapter02\2_Shuffle_CS - CPP\Shuffle\CardsCpp\Debug\CardsCpp.vcxproj.CopyComplete

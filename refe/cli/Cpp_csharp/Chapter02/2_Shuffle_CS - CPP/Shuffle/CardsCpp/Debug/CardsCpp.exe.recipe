@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\ponni\source\repos\E_CPP_practice\cli\Cpp_csharp\Chapter02\2_Shuffle_CS - CPP\Shuffle\Debug\CardsCpp.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs>
+    <NonRecipeFileRef>
+      <FullPath>C:\Users\ponni\source\repos\E_CPP_practice\cli\Cpp_csharp\Chapter02\2_Shuffle_CS - CPP\Shuffle\Shuffle\Shuffle.csproj</FullPath>
+    </NonRecipeFileRef>
+  </NonRecipeFileRefs>
+</Project>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ConcreteFlyweight" Collapsed="true">
+    <Position X="4.5" Y="4.25" Width="1.5" />
+    <InheritanceLine Type="Flyweight" FixedFromPoint="true">
+      <Path>
+        <Point X="6.312" Y="3.046" />
+        <Point X="6.312" Y="3.875" />
+        <Point X="5.25" Y="3.875" />
+        <Point X="5.25" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>ConcreteFlyweight.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsharedConcreteFlyweight" Collapsed="true">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <InheritanceLine Type="Flyweight" FixedFromPoint="true">
+      <Path>
+        <Point X="6.312" Y="3.046" />
+        <Point X="6.312" Y="3.875" />
+        <Point X="7.5" Y="3.875" />
+        <Point X="7.5" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAABAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>UnsharedConcreteFlyweight.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlyweightFactory">
+    <Position X="1.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAY=</HashCode>
+      <FileName>FlyweightFactory.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_Flyweights" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="std::unordered_map&lt;_Kty, _Ty, _Hasher, _Keyeq, _Alloc&gt;" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABAAAAAAABAAACQAAAAAAAAAAEABAAAgQAgAAAEAAA=</HashCode>
+      <FileName>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\unordered_map</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flyweight">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Flyweight.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

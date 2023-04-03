@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Executable>D:\MyAzureDevops\CPP_Projects\Gmock\FirstGMock\Debug\FirstGMockUnitTest.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="TestWidgetController.testConstructor" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>

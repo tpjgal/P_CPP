@@ -1,0 +1,504 @@
+ GoogleTest Installation:
+
+This tutorial assumes that you have a C++ compiler and build tools installed on your system.
+
+Download GoogleTest: gtest-1.7.0.zip
+
+GoogleTest:
+
+    GoogleTest Home Page
+    GoogleTest Primer
+
+Installation: install to /opt/gtest/...
+
+unzip gtest-1.7.0.zip
+cd gtest-1.7.0
+sudo mkdir /opt/gtest /opt/gtest/include /opt/gtest/lib
+./configure --prefix=/opt/gtest
+make
+sudo cp -a include/gtest/ /opt/gtest/include
+sudo cp -a lib/.libs/* /opt/gtest/lib
+rm /opt/gtest/lib/libgtest.la
+rm /opt/gtest/lib/libgtest_main.la
+sudo cp -a lib/libgtest.la /opt/gtest/lib
+sudo cp -a lib/libgtest_main.la /opt/gtest/lib
+
+Note: cp flag "-a" preserves symbolic links
+
+You can also locate GoogleTest in global user directories /use/include and /usr/lib. I personally don't mix package controlled system software with non-package controlled software and thus I use /opt/gtest and not the system areas.
+
+GoogleTest Example:
+
+Google Test is a framework in which we write a unit test driver to call and test C++ class methods.
+Example C++ Classes to Test:
+
+The C++ classes which will be tested by Google Test. The total application will not be tested although it is listed.
+File: src/Addition.hpp
+1
+	#ifndef _ADDITION_HPP_
+2
+	#define _ADDITION_HPP_
+3
+	class Addition
+4
+	{
+5
+	public:
+6
+	    static int twoValues(const int x, const int y);  
+7
+	};
+8
+	#endif
+
+File: src/Addition.cpp
+1
+	#include "Addition.h"
+2
+	 
+3
+	int
+4
+	Addition::twoValues(const int x, const int y)
+5
+	{
+6
+	    return x + y;
+7
+	}
+
+File: src/Multiply.hpp
+1
+	#ifndef _MULTIPLY_HPP_
+2
+	#define _MULTIPLY_HPP_
+3
+	class Multiply
+4
+	{
+5
+	public:
+6
+	    static int twoValues(const int x, const int y);  
+7
+	};
+8
+	#endif
+
+File: src/Multiply.cpp
+1
+	#include "Multiply.h"
+2
+	 
+3
+	int
+4
+	Multiply::twoValues(const int x, const int y)
+5
+	{
+6
+	    return x * y;
+7
+	}
+
+File: src/ExampleApp.cpp
+01
+	#include "Addition.hpp"
+02
+	#include "Multiply.hpp"
+03
+	 
+04
+	#include <stdio.h>
+05
+	 
+06
+	int main()
+07
+	{
+08
+	    int x = 4;
+09
+	    int y = 5;
+10
+	 
+11
+	    int z1 = Addition::twoValues(x,y);
+12
+	    printf("\nAddition Result: %d\n", z1);
+13
+	 
+14
+	    int z2 = Multiply::twoValues(x,y);
+15
+	    printf("Multiply Result: %d\n", z2);
+16
+	 
+17
+	    delete corporation;
+18
+	    return 0;
+19
+	}
+
+File: src/Makefile
+
+CXX = g++
+CXXFLAGS = -g
+INCS = -I./
+OBJS = Addition.o Multiply.o
+
+exampleapp: ExampleApp.cpp $(OBJS)
+	$(CXX) $(CXXFLAGS) -o exampleapp ExampleApp.cpp $(OBJS)
+
+.cpp.o:
+	$(CXX) $(CXXFLAGS) -c $< -o $@ $(INCS)
+
+clean:
+	rm *.o exampleapp gmon.out
+
+Compile: make
+Run: exampleapp
+
+GoogleTest Unit Test Source:
+
+    Program main() to specify tests to run: Main_TestAll.cpp
+    Classes to perform the unit tests:
+        Addition_Test.cpp
+        Multiply_Test.cpp
+
+The GoogleTest framework uses macros to define tests and apply tests:
+
+GoogleTest support tests (TEST(class,test_name)) and test frameworks (TEST_F(class,test_name)). This tutorial will use the more extensive and complete test framework. The framework employs a user written test class derived from ::testing::Test which supplies SetUp() and TearDown() functions.
+Tests:
+
+    ASSERT_XXX(): If assertion fails then processing of test terminate.
+    EXPECT_XXX(): nonfatal failure, allowing processing to continue.
+
+Test	Fatal	NonFatal
+True	ASSERT_TRUE(condition)	EXPECT_TRUE(condition)
+False	ASSERT_FALSE(condition)	EXPECT_FALSE(condition)
+Equal	ASSERT_EQ(arg1,arg2)	EXPECT_EQ(arg1,arg2)
+Not Equal	ASSERT_NE(arg1,arg2)	EXPECT_NE(arg1,arg2)
+Less Than	ASSERT_LT(arg1,arg2)	EXPECT_LT(arg1,arg2)
+Less Than or Equal	ASSERT_LE(arg1,arg2)	EXPECT_LE(arg1,arg2)
+Greater Than	ASSERT_GT(arg1,arg2)	EXPECT_GT(arg1,arg2)
+Greater Than or Equal	ASSERT_GE(arg1,arg2)	EXPECT_GE(arg1,arg2)
+C String Equal	ASSERT_STREQ(str1,str2)	EXPECT_STREQ(str1,str2)
+C String Not Equal	ASSERT_STRNE(str1,str2)	EXPECT_STRNE(str1,str2)
+C String Case Equal	ASSERT_STRCASEEQ(str1,str2)	EXPECT_STRCASEEQ(str1,str2)
+C String Case Not Equal	ASSERT_STRCASENE(str1,str2)	EXPECT_STRCASENE(str1,str2)
+Verify that exception is thrown	ASSERT_THROW(statement,exception_type)	EXPECT_THROW(statement,exception_type)
+Verify that exception is thrown	ASSERT_ANY_THROW(statement)	EXPECT_ANY_THROW(statement)
+Verify that exception is NOT thrown	ASSERT_NO_THROW(statement)	EXPECT_NO_THROW(statement)
+See the GoogleTest advanced guide for more "EXPECT" and "ASSERT" options.
+
+Unit Test Code:
+File: test/src/Main_TestAll.cpp
+1
+	#include <limits.h>
+2
+	#include "gtest/gtest.h"
+3
+	 
+4
+	int main(int argc, char **argv) {
+5
+	  ::testing::InitGoogleTest(&argc, argv);
+6
+	  return RUN_ALL_TESTS();
+7
+	}
+
+File: test/src/Addition_Test.cpp
+01
+	#include <limits.h>
+02
+	#include "gtest/gtest.h"
+03
+	#include "Addition.h"
+04
+	 
+05
+	class AdditionTest : public ::testing::Test {
+06
+	 protected:
+07
+	  virtual void SetUp() {
+08
+	  }
+09
+	 
+10
+	  virtual void TearDown() {
+11
+	    // Code here will be called immediately after each test
+12
+	    // (right before the destructor).
+13
+	  }
+14
+	};
+15
+	 
+16
+	TEST_F(AdditionTest,twoValues){
+17
+	    const int x = 4;
+18
+	    const int y = 5;
+19
+	    Addition addition;
+20
+	    EXPECT_EQ(9,addition.twoValues(x,y));
+21
+	    EXPECT_EQ(5,addition.twoValues(2,3));
+22
+	}
+
+File: test/src/Multiply_Test.cpp
+01
+	#include <limits.h>
+02
+	#include "gtest/gtest.h"
+03
+	#include "Multiply.h"
+04
+	 
+05
+	class MultiplyTest : public ::testing::Test {
+06
+	 protected:
+07
+	  virtual void SetUp() {
+08
+	  }
+09
+	 
+10
+	  virtual void TearDown() {
+11
+	  }
+12
+	};
+13
+	 
+14
+	TEST_F(MultiplyTest,twoValues){
+15
+	    const int x = 4;
+16
+	    const int y = 5;
+17
+	    Multiply multiply;
+18
+	    EXPECT_EQ(20,multiply.twoValues(x,y));
+19
+	    EXPECT_EQ(6,multiply.twoValues(2,3));
+20
+	}
+
+File: test/src/Makefile
+
+CXX = g++
+CXXFLAGS = -g -L/opt/gtest/lib -lgtest -lgtest_main -lpthread
+INCS = -I./ -I../../src -I/opt/gtest/include
+OBJS = ../../src/Addition.o Addition_Test.o ../../src/Multiply.o Multiply_Test.o
+
+testAll: $(OBJS)
+	$(CXX) $(CXXFLAGS) $(INCS) -o testAll  Main_TestAll.cpp $(OBJS)
+
+.cpp.o:
+	$(CXX) $(CXXFLAGS) -c $< -o $@ $(INCS)
+
+clean:
+	rm testAll *.o testAll.xml
+
+Compile: make
+Run: testAll --gtest_output="xml:./testAll.xml"
+
+[==========] Running 2 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from MultiplyTest
+[ RUN      ] MultiplyTest.twoValues
+[       OK ] MultiplyTest.twoValues (5 ms)
+[----------] 1 test from MultiplyTest (5 ms total)
+
+[----------] 1 test from AdditionTest
+[ RUN      ] AdditionTest.twoValues
+[       OK ] AdditionTest.twoValues (4 ms)
+[----------] 1 test from AdditionTest (4 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 2 test cases ran. (9 ms total)
+[  PASSED  ] 2 tests.
+
+GoogleTest XML reporting:
+
+The following is the XML output from GoogleTest in JUnit format: testAll --gtest_output="xml:./testAll.xml"
+
+Output File: test/src/testAll.xml
+1
+	<?xml version="1.0" encoding="UTF-8"?>
+2
+	<testsuites tests="2" failures="0" disabled="0" errors="0" timestamp="2014-09-29T19:16:59" time="0" name="AllTests">
+3
+	  <testsuite name="MultiplyTest" tests="1" failures="0" disabled="0" errors="0" time="0">
+4
+	    <testcase name="twoValues" status="run" time="0" classname="MultiplyTest" />
+5
+	  </testsuite>
+6
+	  <testsuite name="AdditionTest" tests="1" failures="0" disabled="0" errors="0" time="0">
+7
+	    <testcase name="twoValues" status="run" time="0" classname="AdditionTest" />
+8
+	  </testsuite>
+9
+	</testsuites>
+The native Jenkins JUnit XML interpreter can interpret this XML to present test results plots.
+
+Continuous Integration with Jenkins:
+Jenkins Ant file to compile and run a GoogleTest test:
+File: ./build.xml
+01
+	<?xml version="1.0" encoding="UTF-8"?>
+02
+	<project name="CppApp" default="jenkins" basedir=".">
+03
+	    <description>
+04
+	        Jenkins Ant file for CppApp
+05
+	    </description>
+06
+	  <!-- set global properties for this build -->
+07
+	  <property name="make.cmd" value="/usr/bin/make"/>
+08
+	  <property name="build.native" value="./src"/>
+09
+	  <property name="build.test" value="./test/src"/>
+10
+	 
+11
+	  <target name="init">
+12
+	    <!-- Create the time stamp -->
+13
+	    <tstamp/>
+14
+	  </target>
+15
+	 
+16
+	  <target name="compile" description="compile the source" >
+17
+	    <exec dir="${build.native}" executable="${make.cmd}" failonerror="true">
+18
+	    </exec>
+19
+	  </target>
+20
+	 
+21
+	  <arget name="compile-test" description="compile the source" depends="compile">
+22
+	    <exec dir="${build.test}" executable="${make.cmd}" failonerror="true">
+23
+	    </exec>
+24
+	  </target>
+25
+	 
+26
+	  <target name="clean" description="clean up" >
+27
+	    <exec dir="${build.native}" executable="${make.cmd}" failonerror="false">
+28
+	      <arg value="clean"/>
+29
+	    </exec>
+30
+	    <exec dir="${build.test}" executable="${make.cmd}" failonerror="false">
+31
+	      <arg value="clean"/>
+32
+	    </exec>
+33
+	  </target>
+34
+	 
+35
+	  <target name="run" description="Run application" depends="compile">
+36
+	    <exec dir="${build.native}" executable="exampleapp" failonerror="true">
+37
+	    </exec>
+38
+	  </target>
+39
+	 
+40
+	  <target name="run-test" description="Run application" depends="compile-test">
+41
+	    <exec dir="${build.test}" executable="testAll" failonerror="true">
+42
+	      <arg line="--gtest_output="xml:./testAll.xml""/>
+43
+	    </exec>
+44
+	  </target>
+45
+	 
+46
+	</project>
+
+Building and running unit tests:
+
+    Build: ant
+    Test: ant run-test
+
+GoogleTest presents its unit test output in JUnit format, a native format for Jenkins unit test reporting. The following is Jenkins configuration to plot JUnit results:
+
+Jenkins Global Configuration:
+Jenkins -> Manage Jenkins -> Configure System:
+Jenkins/Hudson JUnit configuration
+
+Add the following for GoogleTest support:
+
+    LD_LIBRARY_PATH: /opt/gtest/lib
+    PATH: ./
+
+[Potential Pitfall]: It the Jenkins PATH is not set to include the current working directory "./", you will get the error:
+
+Execute failed: java.io.IOException: Cannot run program
+error=2, No such file or directory
+
+The user paths should be set as well:
+
+File: ~/.bashrc (snipet)
+
+...
+...
+
+if [ -d /opt/gtest/ ]
+then
+  export GTEST_HOME=/opt/gtest
+  export LD_LIBRARY_PATH=$GTEST_HOME/lib:$LD_LIBRARY_PATH
+fi
+
+...
+...
+
+Jenkins Project Configuration:
+Jenkins/Hudson JUnit configuration
+Specify where the XML run results will be located.
+
+Jenkins unit test reporting:
+Jenkins/Hudson JUnit reporting
+Note that there were two tests thus the count is two. Each test had multiple "EXPECT" statements but there were all part of the same test.
+
+For more, see the YoLinux.com Tutorials Jenkins installation and configuration
+
+Links: 

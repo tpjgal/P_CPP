@@ -1,0 +1,140 @@
+lenovo@lenovo-ThinkPad-T410:/media/lenovo/Newvolume/Esakki_folder/CPP/UnitTest/GTest-master$ cd /usr/src/gtest
+lenovo@lenovo-ThinkPad-T410:/usr/src/gtest$ sudo cmake CMakeLists.txt 
+[sudo] password for lenovo: 
+-- The CXX compiler identification is GNU 5.4.0
+-- The C compiler identification is GNU 5.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /usr/src/gtest
+lenovo@lenovo-ThinkPad-T410:/usr/src/gtest$ sudo make
+Scanning dependencies of target gtest
+[ 25%] Building CXX object CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 50%] Linking CXX static library libgtest.a
+[ 50%] Built target gtest
+Scanning dependencies of target gtest_main
+[ 75%] Building CXX object CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[100%] Linking CXX static library libgtest_main.a
+[100%] Built target gtest_main
+lenovo@lenovo-ThinkPad-T410:/usr/src/gtest$ ls
+cmake           CMakeFiles           CMakeLists.txt  libgtest_main.a  src
+CMakeCache.txt  cmake_install.cmake  libgtest.a      Makefile
+lenovo@lenovo-ThinkPad-T410:/usr/src/gtest$ cd ..
+lenovo@lenovo-ThinkPad-T410:/usr/src$ ls
+gtest                             linux-headers-4.15.0-29
+linux-headers-4.15.0-142          linux-headers-4.15.0-29-generic
+linux-headers-4.15.0-142-generic
+lenovo@lenovo-ThinkPad-T410:/usr/src$ cd ..
+lenovo@lenovo-ThinkPad-T410:/usr$ ls
+bin  games  include  lib  local  locale  sbin  share  src
+lenovo@lenovo-ThinkPad-T410:/usr$ cd lib
+lenovo@lenovo-ThinkPad-T410:/usr/lib$ ls
+accountsservice            libunity-webapps
+afnix                      libzlcore.so.0.12.10
+aisleriot                  libzlcore.so.0.13
+apg                        libzltext.so.0.12.10
+apt                        libzltext.so.0.13
+aspell                     lightdm
+at-spi2-core               linux
+avahi                      linux-boot-probes
+binfmt.d                   locale
+blt2.5                     lp_solve
+bluetooth                  man-db
+cheese                     memtest86+
+colord                     mime
+command-not-found          modules-load.d
+compat-ld                  nautilus
+compiz                     NetworkManager
+cups                       nux
+dbus-1.0                   nvidia
+dconf                      openssh
+debug                      os-prober
+dpkg                       os-probes
+eject                      os-release
+emacsen-common             pcmciautils
+environment.d              perl5
+eog                        pkgconfig
+evince                     pkg-config.multiarch
+evolution                  plainbox-provider-checkbox
+evolution-data-server      plainbox-provider-resource-generic
+file-roller                pm-utils
+firefox                    policykit-1
+firefox-addons             policykit-1-gnome
+fwupdate                   pppd
+gcc                        pulse-8.0
+gcr                        python2.7
+geoclue                    python3
+gettext                    python3.5
+ghostscript                rhythmbox
+girepository-1.0           rsyslog
+git-core                   rtkit
+glib-networking            ruby
+gnome-calculator           sasl2
+gnome-keyring              seahorse
+gnome-screensaver          shotwell
+gnome-session              snapd
+gnome-settings-daemon-3.0  software-properties
+gnome-system-monitor       speech-dispatcher-modules
+gnome-terminal             ssl
+gnome-user-share           sudo
+gnupg                      syslinux
+gnupg2                     SYSLINUX
+gold-ld                    syslinux-legacy
+groff                      systemd
+grub                       system-service
+grub-legacy                tar
+gs-plugins-9               tc
+gvfs                       tcltk
+ibus                       thunderbird
+indicators3                thunderbird-addons
+initramfs-tools            tmpfiles.d
+insserv                    totem
+ispell                     ubiquity
+jayatana                   ubuntu-release-upgrader
+jvm                        udisks2
+klibc                      unity-settings-daemon
+language-selector          unity-settings-daemon-1.0
+ldscripts                  update-notifier
+libaccount-plugin-1.0      upower
+libBLT.2.5.so.8.6          upstart
+libBLTlite.2.5.so.8.6      valgrind
+libmbim                    vino
+libnetpbm.so.10            X11
+libnetpbm.so.10.0          x86_64-linux-gnu
+libpeas-1.0                xorg
+libqmi                     xserver-xorg-video-intel-hwe-16.04
+libreoffice                xvmcconfig-standard
+libunibreak.so.1           zlibrary
+libunibreak.so.1.0.1
+lenovo@lenovo-ThinkPad-T410:/usr/lib$ cd ..
+lenovo@lenovo-ThinkPad-T410:/usr$ ls
+bin  games  include  lib  local  locale  sbin  share  src
+lenovo@lenovo-ThinkPad-T410:/usr$ cd src/
+lenovo@lenovo-ThinkPad-T410:/usr/src$ cd gtest/
+lenovo@lenovo-ThinkPad-T410:/usr/src/gtest$ ls
+cmake           CMakeFiles           CMakeLists.txt  libgtest_main.a  src
+CMakeCache.txt  cmake_install.cmake  libgtest.a      Makefile
+lenovo@lenovo-ThinkPad-T410:/usr/src/gtest$ sudo cp libgtest.a libgtest_main.a /usr/lib
+lenovo@lenovo-ThinkPad-T410:/usr/src/gtest$ 
+

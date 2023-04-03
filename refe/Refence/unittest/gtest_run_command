@@ -1,0 +1,8 @@
+
+
+To run the test:
+
+g++ tests.cpp -lgtest -lpthread -o a
+
+./a
+

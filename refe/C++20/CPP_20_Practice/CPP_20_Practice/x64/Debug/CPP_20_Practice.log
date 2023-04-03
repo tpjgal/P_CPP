@@ -1,0 +1,5 @@
+﻿  CPP_20_Practice.cpp
+C:\Users\ponni\source\repos\E_CPP_practice\C++20\CPP_20_Practice\CPP_20_Practice\Coroutine_ex1.h(15,11): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+C:\Users\ponni\source\repos\E_CPP_practice\C++20\CPP_20_Practice\CPP_20_Practice\Likely_Unlikely_ex1.h(8,17): warning C5051: attribute 'likely' requires at least '/std:c++20'; ignored
+C:\Users\ponni\source\repos\E_CPP_practice\C++20\CPP_20_Practice\CPP_20_Practice\Likely_Unlikely_ex1.h(13,11): warning C5051: attribute 'unlikely' requires at least '/std:c++20'; ignored
+  CPP_20_Practice.vcxproj -> C:\Users\ponni\source\repos\E_CPP_practice\C++20\CPP_20_Practice\x64\Debug\CPP_20_Practice.exe

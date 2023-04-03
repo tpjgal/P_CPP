@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {a6407857-01e2-4dee-ab46-c3a2ef1d299d} = s 'Solver class'
+		{
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+			TypeLib = s '{3654165b-ee73-4e21-87e6-78da9c3b68aa}'
+			Version = s '1.0'
+		}
+	}
+}
