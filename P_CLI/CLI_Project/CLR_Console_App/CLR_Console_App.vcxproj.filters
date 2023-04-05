@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Constructor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Method.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Value_Ref.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Struct_Value_Ref.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Static_Method.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Static_Constructor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Boxing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Danger_Arraylist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_SafeBoxing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Marshal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Custom_Attribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Array_Jagged.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Conversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Struct_Virtual.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Interface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Polymorphsim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Abstract.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Virtual_NonVirtural.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_NonVirtualMethod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_VirtualDervied.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_New_override.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_nameoverride.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Base_Class.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_NestedClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Overload.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_hidebyname.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Pointer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Multicast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Instance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Index.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Protection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_NonTrival.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Trival.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CLR_Function_Try.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CLR_Console_App.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AssemblyInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="app.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

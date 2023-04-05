@@ -1,0 +1,54 @@
+﻿  CLR_Console_App.cpp
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Console_App.cpp(28,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Conversion.h(19,9): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Conversion.h(20,9): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Conversion.h(23,9): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Console_App.cpp(29,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Polymorphsim.h(17,7): warning C4594: class 'Mule' can never be instantiated - indirect virtual base class 'Animal' is inaccessible
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Polymorphsim.h(11,23): message : 'Animal' is a private base class of 'Horse'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Polymorphsim.h(19,1): warning C4624: 'Mule': destructor was implicitly defined as deleted
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Polymorphsim.h(43,1): error C2280: 'Mule::Mule(void)': attempting to reference a deleted function
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Polymorphsim.h(19,1): message : compiler has generated 'Mule::Mule' here
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Polymorphsim.h(19,1): message : 'Mule::Mule(void)': function was implicitly deleted because the default constructor of indirect virtual base class 'Mule' is inaccessible
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Abstract.h(4,1): error C2011: 'Sleeps': 'interface' type redefinition
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Interface.h(3,17): message : see declaration of 'Sleeps'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Abstract.h(8,1): error C2011: 'Eats': 'interface' type redefinition
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Interface.h(7,17): message : see declaration of 'Eats'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Abstract.h(11,28): error C2011: 'Animal': 'class' type redefinition
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Polymorphsim.h(3,7): message : see declaration of 'Animal'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Abstract.h(22,16): error C2011: 'Cat': 'struct' type redefinition
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Interface.h(11,12): message : see declaration of 'Cat'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Abstract.h(29,16): error C2011: 'Dog': 'struct' type redefinition
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Interface.h(22,12): message : see declaration of 'Dog'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(4,1): error C3816: 'class Animal' was previously declared or defined with a different managed modifier
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(3,12): message : see declaration of 'Animal'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(4,1): warning C4099: 'Animal': type name first seen using 'class' now seen using 'struct'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(3,12): message : see declaration of 'Animal'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(15,1): error C2504: 'Animal': base class undefined
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(16,21): warning C4490: 'override': incorrect use of override specifier; 'John::Name' does not match a base ref class method
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(16,21): message : 'new' or 'override' are only allowed when a matching base method from a ref class exists
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(33,1): error C3699: '^': cannot use this indirection on type 'Animal'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(33,1): message : compiler replacing '^' with '*' to continue parsing
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(33,19): error C2440: 'initializing': cannot convert from 'John ^' to 'Animal *'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(33,19): message : No user-defined-conversion operator available, or
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(33,19): message : Cannot convert a managed type to a native type
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(34,1): error C2027: use of undefined type 'Animal'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Virtual_NonVirtural.h(3,12): message : see declaration of 'Animal'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_VirtualDervied.h(4,1): error C2011: 'Base': 'struct' type redefinition
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_NonVirtualMethod.h(3,12): message : see declaration of 'Base'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_VirtualDervied.h(10,20): error C2011: 'Derived': 'struct' type redefinition
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_NonVirtualMethod.h(10,12): message : see declaration of 'Derived'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_VirtualDervied.h(23,1): error C2504: 'Derived': base class undefined
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_New_override.h(18,1): error C2504: 'Derived': base class undefined
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_New_override.h(19,18): warning C4490: 'override': incorrect use of override specifier; 'Derived2::Method' does not match a base ref class method
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_New_override.h(19,18): message : 'new' or 'override' are only allowed when a matching base method from a ref class exists
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Base_Class.h(22,1): error C2504: 'Derived': base class undefined
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Base_Class.h(25,1): error C2027: use of undefined type 'Derived'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Base_Class.h(6,12): message : see declaration of 'Derived'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Base_Class.h(26,1): error C2027: use of undefined type 'Derived'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Base_Class.h(6,12): message : see declaration of 'Derived'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Base_Class.h(27,1): error C2027: use of undefined type 'Derived'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Base_Class.h(6,12): message : see declaration of 'Derived'
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Console_App.cpp(83,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Console_App.cpp(107,5): error C2653: 'RPointer': is not a class or namespace name
+C:\Users\ponni\source\repos\E_CPP_practice\cli\CLI_Project\CLR_Console_App\CLR_Console_App.cpp(107,15): error C3861: 'Main': identifier not found
