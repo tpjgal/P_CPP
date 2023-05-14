@@ -1,1 +1,0 @@
-D:\MyAzureDevops\CPP_Projects\Gmock\FirstGMock\FirstGMock\Debug\FirstGMock.vcxproj.CopyComplete

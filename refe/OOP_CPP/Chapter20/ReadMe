@@ -1,1 +1,0 @@
-The files in this directory correspond to full program examples from Chapter 20. Note that the pImpl pattern example using a unique pointer is in a subdirectory 'unique'
